@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:jsf="http://xmlns.jcp.org/jsf"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    
+    <ui:composition template="/WEB-INF/template.xhtml">
+
+        <ui:define name="content">
+        <h:dataTable id="usuarioTable"
+                     value="#{usuariosController.itemsUsuario}"
+                     var="usuario">
+            <h:column>
+                <f:facet name="header">
+                    Id
+                </f:facet>
+                <h:outputText value="#{usuario.idUsuarios}" />
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    Documento
+                </f:facet>
+                <h:outputText value="#{usuario.documento}" />
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    Nombres
+                </f:facet>
+                <h:outputText value="#{usuario.nombres}" />
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                   Apellidos
+                </f:facet>
+                <h:outputText value="#{usuario.apellidos}" />
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                   Estado
+                </f:facet>
+                <h:outputText value="#{usuario.toString()}" />
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    Apartamento
+                </f:facet>
+                <h:outputText value="#{usuario.idApartamento.numApartamento}" />
+            </h:column>
+        </h:dataTable>
+              </ui:define>
+        </ui:composition>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
